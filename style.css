@@ -1,0 +1,100 @@
+body{
+    background-color: #eee;
+    font-family: 'Rubik', sans-serif;
+}
+
+.header{
+    margin-top: 0;
+}
+
+.chartDescription{
+    font-weight: bold;
+    color: rgb(172, 172, 172);
+}
+
+.outside-sla{
+    background-color: #ff5d5d;
+    height: 50%;
+    margin-top: auto
+}
+.within-sla{
+    background-color: #5dff9e;
+    height: 40%;
+}
+
+.bar{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+.container{
+    width: 60%;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#chart,#months, #within-sla-percentage,#outside-sla-percentage{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 3%;
+}
+
+#chart{
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+}
+
+#months, #within-sla-percentage,#outside-sla-percentage{
+    margin: 10px 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.legend{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0 15px 0;
+    color: rgb(109, 109, 109);
+}
+
+.within-sla-legend,.outside-sla-legend{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+}
+
+.within-sla-legend{
+    background-color: #5dff9e; 
+}
+
+.outside-sla-legend{
+    background-color: #ff5d5d;
+    margin-left: 20px;
+}
+
+.header, .icons{
+    display: inline;
+}
+.icons{
+    float: right;
+}
+i{
+    margin: 0 6px 0 6px;
+    color: rgb(160, 159, 159);
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        overflow: auto;
+    }
+    #chart,#months, #within-sla-percentage,#outside-sla-percentage{
+        grid-gap: 1%;
+    }
+  }
